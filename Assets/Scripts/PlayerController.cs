@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     public Material aura_material_enemy;
     public Material aura_material_objective;
+    public Material aura_material_secondary;
 
     public float emission_amount;
     public AnimationCurve aura_curve;
@@ -82,6 +83,7 @@ public class PlayerController : MonoBehaviour
                 
                 aura_material_enemy.color = new Vector4(1f, 0f, 0f, emission_amount);
                 aura_material_objective.color = new Vector4(1f, 1f, 0.5f, emission_amount);
+                aura_material_secondary.color = new Vector4(1f, 0.5f, 0f, emission_amount);
 
             } else
             {
