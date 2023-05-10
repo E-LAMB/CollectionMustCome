@@ -20,5 +20,6 @@ public class EnemyMonitor : MonoBehaviour
     void Update()
     {
         my_agent.SetDestination(player_pos.position);
+
     }
 }

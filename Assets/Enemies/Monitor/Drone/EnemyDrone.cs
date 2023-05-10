@@ -20,6 +20,13 @@ public class EnemyDrone : MonoBehaviour
 
     public float movement_speed;
 
+    public Transform head_spin;
+    public AnimationCurve turn_curve;
+    public float turn_time;
+    public float turn_time_rotor;
+
+    public Transform[] rotors;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +38,29 @@ public class EnemyDrone : MonoBehaviour
     {
         drone_hover_height_timer += Time.deltaTime / 3f;
 
+        turn_time += Time.deltaTime / 4f;
+        turn_time_rotor += Time.deltaTime * 15f;
+
+        // turn_time += Random.Range(1f, 4f);
+
+        /*
+        if (turn_time > 3600f)
+        {
+            turn_time = 0f;
+        }
+        if (turn_time_rotor > 3600f)
+        {
+            turn_time_rotor = 0f;
+        }
+        */
+        
+        head_spin.localRotation = Quaternion.Euler(0f, turn_curve.Evaluate(turn_time), 0f);
+
+        rotors[0].localRotation = Quaternion.Euler(-90f, turn_curve.Evaluate(turn_time_rotor), 0f);
+        rotors[1].localRotation = Quaternion.Euler(-90f, turn_curve.Evaluate(turn_time_rotor), 0f);
+        rotors[2].localRotation = Quaternion.Euler(-90f, (turn_curve.Evaluate(turn_time_rotor) * -1f), 0f);
+        rotors[3].localRotation = Quaternion.Euler(-90f, (turn_curve.Evaluate(turn_time_rotor) * -1f), 0f);
+
         if (is_moving)
         {
             target_distance = Vector3.Distance(final_handler.position, target_location);
@@ -41,7 +71,7 @@ public class EnemyDrone : MonoBehaviour
             }
 
             final_handler.position = Vector3.MoveTowards(final_handler.position, target_location, movement_speed * Time.deltaTime);
-            drone_hover.localPosition = new Vector3 (0f, default_height + (drone_move_hover_height.Evaluate(drone_hover_height_timer) / 2f), 0f);
+            drone_hover.localPosition = new Vector3 (0f, default_height + (drone_move_hover_height.Evaluate(drone_hover_height_timer) / 5f), 0f);
             
             /*
             drone_hover.LookAt(target_location);
@@ -55,7 +85,7 @@ public class EnemyDrone : MonoBehaviour
 
         } else
         {
-            drone_hover.localPosition = new Vector3 (0f, default_height + drone_move_hover_height.Evaluate(drone_hover_height_timer), 0f);
+            drone_hover.localPosition = new Vector3 (0f, default_height + (drone_move_hover_height.Evaluate(drone_hover_height_timer)/2f), 0f);
             drone_euler = new Vector3 (0f, 0f, 0f);
             drone_hover.localEulerAngles = drone_euler;
         }

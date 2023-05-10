@@ -74,8 +74,10 @@ public class PlayerController : MonoBehaviour
                     aura_transition_time = 0f;
                 } 
 
+                /* */
                 go_cam_norm.SetActive(!Mind.reveal_auras);
                 go_cam_aura.SetActive(Mind.reveal_auras);
+                /* */
 
                 if (aura_transition_time < 1f && Mind.reveal_auras) {aura_transition_time += Time.deltaTime;}
 

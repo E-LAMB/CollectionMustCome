@@ -243,6 +243,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_pos: {fileID: 0}
   my_agent: {fileID: 8791413702159616811}
+  head_spin: {fileID: 2603740453150294997}
+  spin_speed: 6
 --- !u!1 &2037780914994150967
 GameObject:
   m_ObjectHideFlags: 0
