@@ -123,6 +123,76 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 7c5adfcf29fdf5f41945e18353976640, type: 2}
+--- !u!1001 &16082850
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7367886810908826026, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367886810908826026, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367886810908826026, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367886810908826026, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367886810908826026, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367886810908826026, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367886810908826026, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367886810908826026, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367886810908826026, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367886810908826026, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367886810908826026, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367886810908826027, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
+      propertyPath: m_Name
+      value: Whole Drone B
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960993331654630216, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
+      propertyPath: head
+      value: 
+      objectReference: {fileID: 16082851}
+    - target: {fileID: 8960993331654630216, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
+      propertyPath: flying_lean
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
+--- !u!4 &16082851 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6364155117117892477, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
+  m_PrefabInstance: {fileID: 16082850}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &35475902
 GameObject:
   m_ObjectHideFlags: 0
@@ -6521,7 +6591,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1303242661022389379, guid: 0acd37e3ed2f9ba48b20359cf7e2775c, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1303242661022389379, guid: 0acd37e3ed2f9ba48b20359cf7e2775c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6643,7 +6713,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7367886810908826026, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7367886810908826026, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6687,7 +6757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7367886810908826027, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
       propertyPath: m_Name
-      value: Whole Drone
+      value: Whole Drone A
       objectReference: {fileID: 0}
     - target: {fileID: 8960993331654630216, guid: a3112706e9dc46c428968d1d055658c4, type: 3}
       propertyPath: head

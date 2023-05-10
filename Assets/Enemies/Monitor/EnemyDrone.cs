@@ -26,11 +26,19 @@ public class EnemyDrone : MonoBehaviour
     public float turn_time_rotor;
 
     public Transform[] rotors;
+    public Transform[] flaps;
+
+    public AnimationCurve flaps_curve;
+    public float flap_time;
+
+    public bool is_warping;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        drone_hover_height_timer = Random.Range(0f, 4f);
+        turn_time = Random.Range(0f, 4f);
+        turn_time_rotor = Random.Range(0f, 4f);
     }
 
     // Update is called once per frame
@@ -53,6 +61,22 @@ public class EnemyDrone : MonoBehaviour
             turn_time_rotor = 0f;
         }
         */
+
+        if (is_warping)
+        {
+            flap_time -= Time.deltaTime * 4f;
+            if (0f > flap_time)
+            {
+                flap_time = 0f;
+            }
+        } else
+        {
+            flap_time += Time.deltaTime * 4f;
+            if (5f < flap_time)
+            {
+                flap_time = 5f;
+            }
+        }
         
         head_spin.localRotation = Quaternion.Euler(0f, turn_curve.Evaluate(turn_time), 0f);
 
@@ -60,6 +84,15 @@ public class EnemyDrone : MonoBehaviour
         rotors[1].localRotation = Quaternion.Euler(-90f, turn_curve.Evaluate(turn_time_rotor), 0f);
         rotors[2].localRotation = Quaternion.Euler(-90f, (turn_curve.Evaluate(turn_time_rotor) * -1f), 0f);
         rotors[3].localRotation = Quaternion.Euler(-90f, (turn_curve.Evaluate(turn_time_rotor) * -1f), 0f);
+
+        flaps[0].localRotation = Quaternion.Euler(flaps_curve.Evaluate(flap_time), 45f * 0f, 0f);
+        flaps[1].localRotation = Quaternion.Euler(flaps_curve.Evaluate(flap_time), 45f * 1f, 0f);
+        flaps[2].localRotation = Quaternion.Euler(flaps_curve.Evaluate(flap_time), 45f * 2f, 0f);
+        flaps[3].localRotation = Quaternion.Euler(flaps_curve.Evaluate(flap_time), 45f * 3f, 0f);
+        flaps[4].localRotation = Quaternion.Euler(flaps_curve.Evaluate(flap_time), 45f * 4f, 0f);
+        flaps[5].localRotation = Quaternion.Euler(flaps_curve.Evaluate(flap_time), 45f * 5f, 0f);
+        flaps[6].localRotation = Quaternion.Euler(flaps_curve.Evaluate(flap_time), 45f * 6f, 0f);
+        flaps[7].localRotation = Quaternion.Euler(flaps_curve.Evaluate(flap_time), 45f * 7f, 0f);
 
         if (is_moving)
         {
