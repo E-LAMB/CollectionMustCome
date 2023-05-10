@@ -20,9 +20,14 @@ public class PlayerController : MonoBehaviour
     public GameObject go_cam_norm;
     public GameObject go_cam_aura;
 
+    /*
     public Material aura_material_enemy;
     public Material aura_material_objective;
     public Material aura_material_secondary;
+    */
+
+    public Material aura_fade;
+    public GameObject aura_slides;
 
     public float emission_amount;
     public AnimationCurve aura_curve;
@@ -77,15 +82,20 @@ public class PlayerController : MonoBehaviour
                 /* */
                 go_cam_norm.SetActive(!Mind.reveal_auras);
                 go_cam_aura.SetActive(Mind.reveal_auras);
+                aura_slides.SetActive(Mind.reveal_auras);
                 /* */
 
                 if (aura_transition_time < 1f && Mind.reveal_auras) {aura_transition_time += Time.deltaTime;}
 
                 emission_amount = aura_curve.Evaluate(aura_transition_time);
+
+                aura_fade.color = new Vector4(0f, 0f, 0f, 1f - emission_amount);
                 
+                /*
                 aura_material_enemy.color = new Vector4(1f, 0f, 0f, emission_amount);
                 aura_material_objective.color = new Vector4(1f, 1f, 0.5f, emission_amount);
                 aura_material_secondary.color = new Vector4(0f, 0.8f, 1f, emission_amount);
+                */
 
             } else
             {
