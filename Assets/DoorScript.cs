@@ -15,7 +15,19 @@ public class DoorScript : MonoBehaviour
     float r;
     public float new_angle;
 
+    public bool is_double_door;
+    public DoorScript other_door;
+
     public void DoorChange()
+    {
+        is_open = !is_open;
+        if (is_double_door)
+        {
+            other_door.DoubleDoorChange();
+        }
+    }
+
+    public void DoubleDoorChange()
     {
         is_open = !is_open;
     }
