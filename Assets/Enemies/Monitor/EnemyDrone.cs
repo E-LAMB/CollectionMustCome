@@ -8,6 +8,8 @@ public class EnemyDrone : MonoBehaviour
     public Transform drone_hover;
     public Transform final_handler;
 
+    public bool syncup;
+
     public bool is_moving;
     public Vector3 drone_euler;
     public AnimationCurve drone_move_hover_height;
@@ -36,9 +38,12 @@ public class EnemyDrone : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        drone_hover_height_timer = Random.Range(0f, 4f);
-        turn_time = Random.Range(0f, 4f);
-        turn_time_rotor = Random.Range(0f, 4f);
+        if (!syncup)
+        {
+            drone_hover_height_timer = Random.Range(0f, 4f);
+            turn_time = Random.Range(0f, 4f);
+            turn_time_rotor = Random.Range(0f, 4f);
+        }
     }
 
     // Update is called once per frame

@@ -277,6 +277,12 @@ MonoBehaviour:
   closed_direction: 0
   hinge: {fileID: 8196861238772949419}
   new_angle: 0
+  is_double_door: 0
+  other_door: {fileID: 0}
+  is_lifting: 0
+  height_gain: 2.5
+  default_height: {x: 0, y: 0, z: 0}
+  sliding_height: {x: 0, y: 0, z: 0}
 --- !u!208 &8828670425549796507
 NavMeshObstacle:
   m_ObjectHideFlags: 0
