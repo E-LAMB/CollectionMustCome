@@ -15,6 +15,9 @@ public class PlayerInteracter : MonoBehaviour
 
     public Transform point;
 
+    public bool looking_at_interaction;
+    public bool looking_at_something;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +28,13 @@ public class PlayerInteracter : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
+        looking_at_something = false;
 
         if (Physics.Raycast(point.transform.position, point.transform.forward, out hit, interact_distance, interactable_layer))
         {
+            looking_at_something = true;
+            looking_at_interaction = hit.collider.GetComponent<Interaction>();
+
             if (hit.collider.GetComponent<Interaction>() != false)
             {
                 on_interact = hit.collider.GetComponent<Interaction>().when_interacted;
