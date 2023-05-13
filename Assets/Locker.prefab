@@ -505,7 +505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8196861239598686353, guid: b8431f9e9f0534f4189e08c63c68cfbe, type: 3}
       propertyPath: OI_door_key_required
-      value: R
+      value: B
       objectReference: {fileID: 0}
     - target: {fileID: 8196861239598686355, guid: b8431f9e9f0534f4189e08c63c68cfbe, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -594,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8196861239598686353, guid: b8431f9e9f0534f4189e08c63c68cfbe, type: 3}
       propertyPath: OI_door_key_required
-      value: R
+      value: B
       objectReference: {fileID: 0}
     - target: {fileID: 8196861239598686355, guid: b8431f9e9f0534f4189e08c63c68cfbe, type: 3}
       propertyPath: m_Materials.Array.data[0]
