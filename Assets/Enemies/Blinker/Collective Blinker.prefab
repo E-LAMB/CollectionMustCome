@@ -341,8 +341,8 @@ MonoBehaviour:
   my_eyes: {fileID: 5611666286956999695}
   stored_position: {x: 0, y: 0, z: 0}
   my_agent: {fileID: 5611666288599699672}
-  time_to_warp: 0
-  max_time_to_warp: 3
+  time_to_warp: -9
+  max_time_to_warp: 6
   max_distance: 10
 --- !u!198 &5611666286960113717
 ParticleSystem:
@@ -25246,7 +25246,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 8
+  m_Speed: 0
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 200

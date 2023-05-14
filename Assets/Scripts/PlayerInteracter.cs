@@ -9,7 +9,7 @@ public class PlayerInteracter : MonoBehaviour
     public LayerMask interactable_layer;
     public float interact_distance;
 
-    UnityEvent on_interact;
+    public UnityEvent on_interact;
 
     public KeyCode interaction_key;
 

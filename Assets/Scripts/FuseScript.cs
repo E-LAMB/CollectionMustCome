@@ -14,6 +14,8 @@ public class FuseScript : MonoBehaviour
     public Light my_light;
     public Material activation_material;
 
+    public GameObject aura;
+
     public GameObject[] fuses;
 
     public void InteractedWith()
@@ -30,6 +32,7 @@ public class FuseScript : MonoBehaviour
             the_player.ExposeSelf(8f);
             my_bulb.material = activation_material;
             my_light.color = new Vector4(0f, 1f, 0f, 1f);
+            aura.SetActive(false);
         }
     }
 
