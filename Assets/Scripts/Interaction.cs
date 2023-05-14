@@ -12,9 +12,13 @@ public class Interaction : MonoBehaviour
     [Tooltip("Alerts the monster to the player's presence for three seconds.")]
     public bool OI_alert_monster;
 
-    [Header("Item Interactions")]
+    [Header("Fuse Interactions")]
     [Tooltip("Adds a fuse to the player's inventory.")]
     public bool OI_add_fuse;
+    [Tooltip("Is this Gameobject a fusebox?")]
+    public bool OI_is_fusebox;
+
+    [Header("Item Interactions")]
     [Tooltip("Adds a key to the player's inventory.")]
     public bool OI_add_key;
     [Tooltip("Specifies which key to add to their inventory (Only needed if a key is being added).")]
@@ -50,6 +54,12 @@ public class Interaction : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().key_inventory += "/" + OI_key_to_add;
             Debug.Log("Added a key to the player's inventory: " + OI_key_to_add);
+        }
+
+        if (OI_is_fusebox)
+        {
+            gameObject.GetComponent<FuseScript>().InteractedWith();
+            Debug.Log("Interacted with a Fusebox");
         }
 
         if (OI_is_door)
