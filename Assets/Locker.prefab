@@ -455,6 +455,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3191068421566240405}
     m_Modifications:
+    - target: {fileID: 2229603740005156298, guid: b8431f9e9f0534f4189e08c63c68cfbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8196861238772949418, guid: b8431f9e9f0534f4189e08c63c68cfbe, type: 3}
       propertyPath: m_Name
       value: Blue Door
@@ -544,6 +548,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3191068421566240405}
     m_Modifications:
+    - target: {fileID: 2229603740005156298, guid: b8431f9e9f0534f4189e08c63c68cfbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8196861238772949418, guid: b8431f9e9f0534f4189e08c63c68cfbe, type: 3}
       propertyPath: m_Name
       value: Blue Door
